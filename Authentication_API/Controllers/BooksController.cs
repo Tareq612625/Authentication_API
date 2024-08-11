@@ -41,7 +41,6 @@ namespace Authentication_API.Controllers
         {
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
-
             return CreatedAtAction(nameof(GetBook), new { id = book.Id }, book);
         }
         private bool BookExists(int id)
